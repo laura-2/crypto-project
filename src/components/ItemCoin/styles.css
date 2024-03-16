@@ -1,0 +1,22 @@
+#items{
+    background-color: antiquewhite;
+    display: flex;
+    padding: 2em;
+    margin: 2em;
+    justify-content: space-around;
+    text-decoration: none !important;
+    align-items: center;
+    border-radius: 20px;
+}
+
+#items:hover{
+    cursor: pointer;
+}
+.name-item, .symbol-item, .price-item{
+    color: black;
+    font-size: 22px;
+}
+.image-item{
+    border: 1px solid antiquewhite;
+    border-radius: 40px;
+}
