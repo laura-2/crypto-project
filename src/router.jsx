@@ -1,6 +1,7 @@
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import List from './components/List';
 import Details from './components/Details';
+import ConnectWallet from './components/ConnectWallet';
 
 export default function RouterPage(){
   return (
@@ -8,6 +9,7 @@ export default function RouterPage(){
       <Routes>
         <Route exact path="/" element={<List />} />
         <Route path="/details/:id" element={<Details />} />
+        <Route path="/wallet" element={<ConnectWallet/>}/>
       </Routes>
     </Router>
   )
