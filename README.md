@@ -20,3 +20,5 @@ Passo 5: Instale as dependências do projeto executando o seguinte comando no te
 
 Passo 6: Execute o seguinte comando no terminal ou prompt de comando para rodar o projeto no seu computador:<br>
 <strong>npm run dev</strong>
+
+
