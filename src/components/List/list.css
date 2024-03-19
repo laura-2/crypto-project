@@ -1,0 +1,10 @@
+.title{
+    font-size: 42px;
+    color: #00005f;
+    font-style: italic;
+}
+@media screen and (max-width: 500px){
+    .title{
+        font-size: 36px;
+    }
+}

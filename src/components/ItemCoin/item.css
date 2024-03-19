@@ -1,12 +1,13 @@
 #items{
-    background-color: antiquewhite;
+    background-color: rgba(185, 207, 240, 0.918);
     display: flex;
     padding: 2em;
-    margin: 2em;
+    margin: 2em auto;
     justify-content: space-around;
     text-decoration: none !important;
     align-items: center;
     border-radius: 20px;
+    border: 1px solid #00005f;
 }
 
 #items:hover{
@@ -17,6 +18,12 @@
     font-size: 22px;
 }
 .image-item{
-    border: 1px solid antiquewhite;
+    border: 1px solid transparent;
     border-radius: 40px;
+}
+@media screen and (max-width: 500px){
+    #items{
+        display: block;
+        gap: 5em;
+    }
 }

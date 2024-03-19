@@ -1,5 +1,7 @@
 import detectEthereumProvider from "@metamask/detect-provider"
 import { useEffect, useState } from "react"
+import Translator from '../I18n/translator'
+import './wallet.css'
 
 export default function ConnectWallet(){
     const [hasProvider, setHasProvider] = useState(null);
@@ -56,14 +58,14 @@ export default function ConnectWallet(){
     }
     return(
         <div>
-        <p> Injected Provider {hasProvider ? 'DOES' : 'DOES NOT'} Exist</p>
+        <p className="textProvider">{hasProvider ? <Translator path="provider.yes"/> : <Translator path="provider.no"/>}</p>
         {window.ethereum?.isMetaMask && !wallet.accounts.length > 0 && (
-        <button onClick={handleConnect}>Connect MetaMask</button>
+        <button onClick={handleConnect} className="button-connect"><Translator path="provider.button"/></button>
     )}
         {wallet.accounts.length > 0 &&
-        <div>
-        <p>Wallet Connected: {wallet.accounts[0]}</p>
-        <p>Balance: {wallet.balance} ETH</p>
+        <div className="info-connection">
+        <p><Translator path="provider.walletConnection"/>: {wallet.accounts[0]}</p>
+        <p><Translator path="provider.balance"/>: {wallet.balance} ETH</p>
         </div>}
         </div>
     )

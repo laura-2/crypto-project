@@ -1,12 +1,13 @@
 /* eslint-disable react/prop-types */
-import './styles.css'
+import './details.css'
 import axios from "axios";
 import { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
 import {AreaChart, CartesianGrid, Tooltip, YAxis, XAxis, Legend, Area} from 'recharts';
+import API_KEY from '../../api'
+import Translator from '../I18n/translator'
 
 export default function Details(){
-    const API_KEY = 'CG-LXmYKhvdPE2UFHWwoCzpFw8P';
     const [itemDetails, setItemDetails] = useState(null)
     const [chartData, setChartData] = useState([])
 
@@ -44,14 +45,17 @@ export default function Details(){
         <section>
         {itemDetails && (
             <div id="box">
-                <img className="box-image" src={itemDetails.image.small} width="80" height="auto"/> 
-                <p className="box-price">Current price: ${itemDetails.market_data.current_price.usd}</p>
-                <p className="box-price-hight">High price 24h: ${itemDetails.market_data.high_24h.usd}</p>
-                <p className="box-price-low">Low price 24h: ${itemDetails.market_data.low_24h.usd}</p>
-                <p className="box-volume">Volume: ${itemDetails.market_data.total_volume.usd}</p>
+                <img className="box-image" src={itemDetails.image.small} width="50" height="50"/> 
+                <p className="box-price"><Translator path="details.price"/>: ${itemDetails.market_data.current_price.usd}</p>
+                <p className="box-price-high"><Translator path="details.priceHigh"/>: ${itemDetails.market_data.high_24h.usd}</p>
+                <p className="box-price-low"><Translator path="details.priceLow"/>: ${itemDetails.market_data.low_24h.usd}</p>
+                <p className="box-volume"><Translator path="details.volume"/>: ${itemDetails.market_data.total_volume.usd}</p>
+                <a href='/wallet'><button className='buttonWallet'><Translator path="wallet.button"/></button></a>
             </div>
         )}
-        <AreaChart width={1200} height={400} data={chartData}>
+        <div id="areachart">
+            <h2 className='chartText'><Translator path="details.chartText"/></h2>
+        <AreaChart width={800} height={300} data={chartData} className='chart'>
         <CartesianGrid strokeDasharray="4 4" />
         <XAxis dataKey="day" />
         <YAxis />
@@ -59,7 +63,7 @@ export default function Details(){
         <Legend />
         <Area dataKey="price" stroke="#8884d8" fill="#8884d8" />
       </AreaChart>
-      <a href='/wallet'>Wallet</a>
+      </div>
         </section>
     )
 }

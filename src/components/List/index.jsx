@@ -1,10 +1,13 @@
 import { useEffect, useState } from "react"
 import ItemCoin from "../ItemCoin"
 import axios from "axios"
+import I18n from "../I18n"
+import Translator from "../I18n/translator"
+import './list.css'
+import API_KEY from '../../api'
 
 export default function List(){
     const [list, setList] = useState([])
-    const API_KEY = 'CG-LXmYKhvdPE2UFHWwoCzpFw8P';
 
     useEffect(() => {
         axios.get(`https://api.coingecko.com/api/v3/coins/markets?vs_currency=usd&${API_KEY}`)
@@ -17,10 +20,11 @@ export default function List(){
     }, [])
     return (
         <div>
-            <h1>Listing of TOP 10 cryptocurrencies:</h1>
-        {list.slice(0,10).map((items, index)=>(
-            <ItemCoin key={index} props={items}/>
-        ))}
+            <I18n/>
+            <h2 className="title"><Translator path="home.title"/></h2>
+            {list.slice(0,10).map((items, index)=>(
+                <ItemCoin key={index} props={items}/>
+            ))}
         </div>
     )
 }
