@@ -1,7 +1,7 @@
 export default {
     translations: { 
       home: {
-        title: 'Listing of TOP 10 cryptocurrencies'
+        title: 'TOP 10 cryptocurrencies'
       },
       item: {
         textName: 'Name',
@@ -12,7 +12,7 @@ export default {
         priceHigh: 'High price 24h',
         priceLow: 'Low price 24h',
         volume: 'Volume',
-        chartText: 'Price chart'
+        chartText: 'Price chart (30 days)'
       },
       wallet:{
         button: 'Wallet'

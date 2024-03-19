@@ -1,7 +1,7 @@
 export default {
     translations: {
       home: {
-        title: 'Lista TOP 10 criptomoedas'
+        title: 'TOP 10 criptomoedas'
       },
       item: {
         textName: 'Nome',
@@ -12,7 +12,7 @@ export default {
         priceHigh: 'Maior preço em 24h',
         priceLow: 'Menor preço em 24h',
         volume: 'Volume total',
-        chartText: 'Gráfico de preços'
+        chartText: 'Gráfico de preços (30 dias)'
       },
       wallet:{
         button: 'Carteira'

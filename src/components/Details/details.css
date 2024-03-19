@@ -7,6 +7,7 @@
 .box-image{
     border: 1px solid transparent;
     border-radius: 30px;
+    margin: 1em;
 }
 .box-price, .box-price-high, .box-price-low, .box-volume{
     font-size: 16px;
@@ -31,10 +32,13 @@
     border-radius: 20px;
     font-size: 15px;
 }
-
-@media screen and (max-width: 600px){
+.buttonWallet:hover{
+    cursor: pointer;
+}
+@media screen and (max-width: 820px){
     #box{
         display: block;
         gap: 5em;
+        text-align: center;
     }
 }

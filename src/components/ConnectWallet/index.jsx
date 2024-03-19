@@ -50,6 +50,7 @@ export default function ConnectWallet(){
         )
         setWallet({ accounts, balance });
     };
+    
     const handleConnect = async () => {
         let accounts = await window.ethereum.request({
                 method: 'eth_requestAccounts'

@@ -1,13 +1,13 @@
 #items{
-    background-color: rgba(185, 207, 240, 0.918);
     display: flex;
-    padding: 2em;
-    margin: 2em auto;
+    padding: 1em;
+    margin: 2em 3em;
     justify-content: space-around;
     text-decoration: none !important;
     align-items: center;
     border-radius: 20px;
-    border: 1px solid #00005f;
+    border: 1px solid white;
+    box-shadow: 0 0 20px 1px #00005f;
 }
 
 #items:hover{
@@ -21,9 +21,16 @@
     border: 1px solid transparent;
     border-radius: 40px;
 }
-@media screen and (max-width: 500px){
+.rank-item{
+    color: #00005f;
+}
+
+@media screen and (max-width: 768px){
     #items{
         display: block;
-        gap: 5em;
+        text-align: center;
+    }
+    .name-item, .symbol-item, .price-item{
+        font-size: 18px;
     }
 }
