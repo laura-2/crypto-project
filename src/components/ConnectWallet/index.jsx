@@ -58,13 +58,13 @@ export default function ConnectWallet(){
             updateWallet(accounts)
     }
     return(
-        <div>
+        <div> { /* Conectando a metaMask */ }
         <p className="textProvider">{hasProvider ? <Translator path="provider.yes"/> : <Translator path="provider.no"/>}</p>
         {window.ethereum?.isMetaMask && !wallet.accounts.length > 0 && (
         <button onClick={handleConnect} className="button-connect"><Translator path="provider.button"/></button>
     )}
         {wallet.accounts.length > 0 &&
-        <div className="info-connection">
+        <div className="info-connection"> { /* Informações da conta e saldo da wallet */ }
         <p><Translator path="provider.walletConnection"/>: {wallet.accounts[0]}</p>
         <p><Translator path="provider.balance"/>: {wallet.balance} ETH</p>
         </div>}

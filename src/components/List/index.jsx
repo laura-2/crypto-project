@@ -20,8 +20,9 @@ export default function List(){
     }, [])
     return (
         <div>
-            <I18n/>
+            <I18n/>  { /* Escolha do idioma para aplicar ao projeto */ }
             <h2 className="title"><Translator path="home.title"/></h2>
+            { /* Lista dos container com as TOP 10 cryptomoedas */ }
             {list.slice(0,10).map((items, index)=>(
                 <ItemCoin key={index} props={items}/>
             ))}

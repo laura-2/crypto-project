@@ -1,4 +1,3 @@
-/* eslint-disable react/prop-types */
 import './details.css'
 import axios from "axios";
 import { useEffect, useState } from "react";
@@ -13,6 +12,7 @@ export default function Details(){
 
 
     const {id} = useParams()
+    { /* Chamando API das cryptomoedas e suas informações, como preço atual, volume, preço alto, baixo */ }
     useEffect(() => {
         axios.get(`https://api.coingecko.com/api/v3/coins/${id}?x_cg_demo_api_key=${API_KEY}`)
             .then(response => {
@@ -27,7 +27,7 @@ export default function Details(){
             console.error(erro)
         })
     }, [id])
-
+    { /* Chamando API para gráfico de preços */ }
     useEffect(() => {
         axios.get(`https://api.coingecko.com/api/v3/coins/${id}/market_chart?vs_currency=usd&days=30&${API_KEY}`)
         .then(response => {
@@ -45,7 +45,7 @@ export default function Details(){
     return (
         <section>
             {itemDetails && (
-                <div id="box">
+                <div id="box"> { /* Passando as informações da cryptomoeda para o box */ }
                     <img className="box-image" src={itemDetails.image.small} width="50" height="50"/> 
                     <p className="box-price"><strong><Translator path="details.price"/></strong>: ${itemDetails.market_data.current_price.usd}</p>
                     <p className="box-price-high"><strong><Translator path="details.priceHigh"/></strong>: ${itemDetails.market_data.high_24h.usd}</p>
@@ -54,7 +54,7 @@ export default function Details(){
                     <a href='/wallet'><button className='buttonWallet'><Translator path="wallet.button"/></button></a>
                 </div>
             )}
-            <div id="areachart">
+            <div id="areachart"> { /* Gráfico de preços */ }
                 <h2 className='chartText'><Translator path="details.chartText"/></h2>
                 <ResponsiveContainer width="80%" height={400} className='chart'>
                     <AreaChart data={chartData}>

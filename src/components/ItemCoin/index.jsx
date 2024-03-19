@@ -2,6 +2,7 @@ import Translator from '../I18n/translator'
 import './item.css'
 
 export default function ItemCoin({props}){
+    //container para receber as informações de cada cryptomoeda
     return (
         <a id="items" href={`/details/${props.id}`}>
             <p className='rank-item'><strong>#{props.market_cap_rank}</strong></p>
