@@ -19,7 +19,7 @@ export default {
       },
       provider: {
         yes: 'Provider Injected',
-        no: 'No Provider',
+        no: 'No Provider, add MetaMask extension',
         button: 'Connect Metamask',
         walletConnection: 'Wallet connect',
         balance: 'Balance'

@@ -19,9 +19,9 @@ export default {
       },
       provider: {
         yes: 'Provedor encontrado',
-        no: 'Sem provedor',
+        no: 'Sem provedor, adicione a extensão do MetaMask',
         button: 'Conectar Metamask',
-        walletConection: 'Carteira conectada',
+        walletConnection: 'Carteira conectada',
         balance: 'Saldo'
       }
     }

@@ -3,6 +3,7 @@
     justify-content: space-around;
     font-size: 22px;
     align-items: center;
+    gap: 1em;
 }
 .box-image{
     border: 1px solid transparent;
@@ -11,17 +12,6 @@
 }
 .box-price, .box-price-high, .box-price-low, .box-volume{
     font-size: 16px;
-}
-.areaChart{
-    margin: 3em auto;
-}
-.chart{
-    margin: 0 auto;
-}
-
-.chartText{
-    color: #00005f;
-    text-align: center;
 }
 .buttonWallet{
     border: 1px solid #00005f;

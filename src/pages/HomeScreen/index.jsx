@@ -1,12 +1,11 @@
 import { useEffect, useState } from "react"
-import ItemCoin from "../ItemCoin"
 import axios from "axios"
-import I18n from "../I18n"
-import Translator from "../I18n/translator"
-import './list.css'
+import './styles.css'
 import API_KEY from '../../api'
-
-export default function List(){
+import Translator from "../../components/I18n/translator"
+import ItemCoin from '../../components/ItemCoin'
+import I18n from "../../components/I18n"
+export default function HomeScreen(){
     const [list, setList] = useState([])
 
     useEffect(() => {

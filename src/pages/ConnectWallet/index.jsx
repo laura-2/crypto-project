@@ -1,6 +1,6 @@
 import detectEthereumProvider from "@metamask/detect-provider"
 import { useEffect, useState } from "react"
-import Translator from '../I18n/translator'
+import Translator from '../../components/I18n/translator'
 import './wallet.css'
 
 export default function ConnectWallet(){
