@@ -12,14 +12,16 @@ export default {
         priceHigh: 'Maior preço em 24h',
         priceLow: 'Menor preço em 24h',
         volume: 'Volume total',
-        chartText: 'Gráfico de preços (30 dias)'
+        chartText: 'Gráfico de preços (30 dias)',
+        chartDate: 'Data',
+        chartPrice: 'Preço'
       },
       wallet:{
         button: 'Carteira'
       },
       provider: {
-        yes: 'Provedor encontrado',
-        no: 'Sem provedor, adicione a extensão do MetaMask',
+        yes: 'Carteira encontrada',
+        no: 'Adicione a extensão do MetaMask para conectar sua carteira',
         button: 'Conectar Metamask',
         walletConnection: 'Carteira conectada',
         balance: 'Saldo'

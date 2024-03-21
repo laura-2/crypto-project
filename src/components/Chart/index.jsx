@@ -2,7 +2,7 @@ import './chart.css'
 import {AreaChart, CartesianGrid, Tooltip, YAxis, XAxis, Legend, Area, ResponsiveContainer} from 'recharts';
 import Translator from '../I18n/translator'
 
-export default function Chart({data}){
+export default function Chart({data, price}){
     return (
             <div id="areachart"> { /* Gráfico de preços */ }
                 <h2 className='chartText'><Translator path="details.chartText"/></h2>
@@ -13,7 +13,7 @@ export default function Chart({data}){
                     <YAxis />
                     <Tooltip />
                     <Legend />
-                    <Area dataKey="price" stroke="#8884d8" fill="#8884d8" />
+                    <Area dataKey={price} stroke="#8884d8" fill="#8884d8" />
                 </AreaChart>
             </ResponsiveContainer>
             </div>

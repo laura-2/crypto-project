@@ -1,7 +1,7 @@
 import detectEthereumProvider from "@metamask/detect-provider"
 import { useEffect, useState } from "react"
 import Translator from '../../components/I18n/translator'
-import './wallet.css'
+import './styles.css'
 
 export default function ConnectWallet(){
     const [hasProvider, setHasProvider] = useState(null);
@@ -65,8 +65,8 @@ export default function ConnectWallet(){
     )}
         {wallet.accounts.length > 0 &&
         <div className="info-connection"> { /* Informações da conta e saldo da wallet */ }
-        <p><Translator path="provider.walletConnection"/>: {wallet.accounts[0]}</p>
-        <p><Translator path="provider.balance"/>: {wallet.balance} ETH</p>
+        <p><strong><Translator path="provider.walletConnection"/></strong>: {wallet.accounts[0]}</p>
+        <p><strong><Translator path="provider.balance"/></strong>: {wallet.balance} ETH</p>
         </div>}
         </div>
     )
