@@ -7,7 +7,7 @@ export default function ConnectWallet(){
     const [hasProvider, setHasProvider] = useState(null);
     const inicialState = {accounts: [], balance: ''};
     const [wallet, setWallet] = useState(inicialState);
-
+    //Formato do saldo valor
     const formatBalance = (rawBalance) => {
         const balance = (parseInt(rawBalance) / 1000000000000000000).toFixed(2);
         return balance;
@@ -40,7 +40,7 @@ export default function ConnectWallet(){
             window.ethereum?.removeListener("accountsChanged", refreshAccounts)
         }
     }, [])
-
+    //Implementando integração com wallet de acordo com a documentação MetaMask
     const updateWallet = async (accounts) => {
         const balance = formatBalance(
             await window.ethereum.request({
